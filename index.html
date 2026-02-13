@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day 💝</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div class="heart-bg" id="heartBg"></div>
+
+    <div class="container">
+        <!-- Page 1: Opening -->
+        <div class="page active" id="page1">
+            <div class="message-box" onclick="nextPage(2)">
+                <div class="message-icon">💌</div>
+                <div class="message-text" id="greeting">Hi Dear,</div>
+                <div class="message-subtext">I have something for you</div>
+                <div class="message-subtext" style="margin-top: 15px; font-size: 14px; color: #d4a5a5;">
+                    (Click to open)
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Question -->
+        <div class="page" id="page2">
+            <div class="question-box">
+                <div class="gif-container">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHY5MHoxN244NWZkY2ZibHI4ZjdueGhudGJxaWtjcGZlNzF6OTN2NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nyhYZlVSG7xMGUS1C9/giphy.gif" alt="Heart" class="question-icon">
+                </div>
+                <div class="question-text">Will you be my Valentine?🥺👉👈</div>
+                <div class="button-container">
+                    <button class="btn btn-yes" onclick="nextPage(3)">Yes! 💕</button>
+                    <button class="btn btn-no" id="noBtn" onclick="handleNo()">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3: Closing -->
+        <div class="page" id="page3">
+            <div class="closing-box">
+                 <div class="gif-container">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjRzNjhkcXl0M29meTZxM202NXp2YzFpZzZtOG1yMGVoZjYxeHZzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fVyNy7A3DK2WQS68fM/giphy.gif" alt="Heart" class="question-icon">
+                </div>
+                <div class="closing-title">Yeeey!❤️✨</div>
+                <div class="closing-text">
+                    Thank you for saying yes! You just made my day so much brighter. 
+                    I promise to make this Valentine's Day special for us.
+                </div>
+                <div class="closing-text">
+                    Get ready for lots of love, laughter, and unforgettable moments together! 
+                </div>
+                <div class="closing-text">
+                    💕 💕 💕 💕 💕 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

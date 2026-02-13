@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffd6e8 50%, #ffb3d9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating hearts background */
+.heart-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.4;
+    animation: float 15s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Page 1 - Opening */
+.message-box {
+    background: white;
+    border-radius: 30px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ffe4ec;
+}
+
+.message-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(255, 182, 193, 0.4);
+}
+
+.message-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.message-text {
+    font-size: 28px;
+    color: #2d2d2d;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.message-subtext {
+    font-size: 18px;
+    color: #ff69b4;
+    font-weight: 600;
+}
+
+/* Page 2 - Question */
+.question-box {
+    background: white;
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
+    border: 2px solid #ffe4ec;
+}
+
+.gif-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    background: #fff0f5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 3px solid #ffe4ec;
+    box-shadow: 0 5px 20px rgba(255, 182, 193, 0.2);
+}
+
+.question-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.question-text {
+    font-size: 32px;
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yes {
+    background: linear-gradient(135deg, #ffb3d9 0%, #ff69b4 100%);
+    color: white;
+}
+
+.btn-yes:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+}
+
+.btn-no {
+    background: #fff0f5;
+    color: #ff69b4;
+    border: 2px solid #ffb3d9;
+    transition: all 0.3s ease;
+}
+
+.btn-no:hover {
+    background: #ffe4ec;
+}
+
+/* Page 3 - Closing */
+.closing-box {
+    background: white;
+    border-radius: 30px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
+    border: 2px solid #ffe4ec;
+}
+
+.celebration-icon {
+    font-size: 100px;
+    margin-bottom: 30px;
+    animation: rotate 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+}
+
+.closing-title {
+    font-size: 36px;
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.closing-text {
+    font-size: 20px;
+    color: #6b6b6b;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.love-message {
+    font-size: 24px;
+    color: #ff1493;
+    font-weight: 600;
+    margin-top: 20px;
+}
