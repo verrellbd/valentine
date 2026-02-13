@@ -37,7 +37,7 @@ This will change "Hi dear," to "Hi Adi,"
 - `index.html` - Main HTML structure
 - `style.css` - Styling and animations
 - `script.js` - Interactive functionality
-- `not-cute-anymore.mp3` - Background music (you need to add this file)
+- `song.mp3` - Background music (you need to add this file)
 
 ## Setup for GitHub Pages
 
