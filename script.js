@@ -6,6 +6,18 @@ if (name) {
     document.getElementById('greeting').textContent = `Hi ${name},`;
 }
 
+// Background Music
+const bgMusic = document.getElementById('bgMusic');
+bgMusic.volume = 0.5; // Set volume to 50%
+
+// Start music on first user interaction
+function startMusic() {
+    bgMusic.play().catch(e => console.log("Audio playback failed:", e));
+    document.removeEventListener('click', startMusic);
+}
+
+document.addEventListener('click', startMusic);
+
 // Create floating hearts
 function createHearts() {
     const heartBg = document.getElementById('heartBg');
